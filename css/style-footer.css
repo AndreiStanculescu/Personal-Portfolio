@@ -100,7 +100,7 @@
 
 .footer-link:hover {
     background-color: #fff;
-    color: var(--footer-color);
+    color: var(--h1-color);
     border-color: #fff;
     transform: scale(1.07);
 }

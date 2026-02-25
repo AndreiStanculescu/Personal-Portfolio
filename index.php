@@ -11,7 +11,9 @@ require_once "config.php";
     <!-- import font logo -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="<?= $logo ?>">
+
     <title><?= $t['nume_aplicatie'] ?></title>
+
 
 
     <style>
@@ -25,7 +27,8 @@ require_once "config.php";
     </style>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style-index.css">
+    <!-- <link rel="stylesheet" href="css/style-index.css"> -->
+    <link rel="stylesheet" href="css/style-index.css?v=<?php echo filemtime('css/style-index.css'); ?>">
 
 </head>
 
@@ -35,12 +38,14 @@ require_once "config.php";
 
 
     <section class="hero">
+        <img src="../assets/poza_acasa2.png" class="hero-img">
 
-    
-    <div class="logo-a">
-        <span><?= $t['nume_aplicatie'] ?></span>
-    </div>
-    
+
+
+        <div class="logo-a">
+            <span><?= $t['nume_aplicatie'] ?></span>
+        </div>
+
         <section class="cards-section">
             <!-- <h2 class="cards-title">L'académie Chic</h2> -->
             <div class="cards-container">

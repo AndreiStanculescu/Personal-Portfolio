@@ -20,6 +20,12 @@
 <header class="main-header">
   <div class="header-container">
 
+    <div class="logo-icon-wrapper">
+      <a href="index.php" class="logo-link">
+        <img src="assets/logo.png" alt="Icon" class="logo-icon">
+      </a>
+    </div>
+
     <div class="logo">
       <a href="index.php" class="logo-link">
         <span><?= $t['nume_aplicatie'] ?></span>

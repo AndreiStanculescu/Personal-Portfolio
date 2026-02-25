@@ -13,8 +13,7 @@ body {
     min-height: 100vh;
     font-family: "Absolut Headline Web 2021";
     color: #fff;
-    background-color: var(--body-color);
-    /* gri închis */
+    background-color: white; /*var(--body-color); */
 }
 
 :root {
@@ -31,19 +30,27 @@ body {
     min-height: 100vh;
     overflow: visible;
 
+    justify-content: flex-start;
+    overflow: hidden;
+
     /* Două background-uri */
     /* background-image: url('../assets/1.jpg'), url('../assets/2.jpg');
     background-repeat: no-repeat, no-repeat;
     background-position: left top, right top;
     background-size: 50% 100%, 50% 100%; */
+}
 
-    background-image: url('../assets/poza_acasa3.png');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+/* fundal */
+.hero-img {
+    position: absolute;
+    top:0%;            
+    width: auto;             /* nu se întinde pe width */
+    height: auto;            /* păstrează proporțiile */
+    min-width: 100%;         /* să acopere lățimea ecranului */
+    min-height: 100%;        /* să acopere înălțimea ecranului */
+    max-width: none;
+    max-height: none;
+    z-index: 1;
 }
 
   /* LOGO */
@@ -60,6 +67,7 @@ body {
     transform: translateX(-50%);
     text-align: center;
     margin-bottom: 2rem; 
+    z-index:2;
   }
 
   
@@ -101,7 +109,7 @@ body {
 /* SECTIUNE CARTONASE */
 .cards-section {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     padding: 20vh 20px 60px 20px;
 }
 
@@ -171,14 +179,15 @@ body {
 }
 
 
-/* TABLETE & TELEFOANE */
-@media (max-width: 768px) {
-    .hero img {
-        max-width: 140px;
-        margin-bottom: 30px;
+/* MEDIA */
+/* @media (max-width: 1600px) {
+    .hero {
+       background-position: center 50%;
     }
+} */
 
 
+@media (max-width: 768px) {
 
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
@@ -196,25 +205,20 @@ body {
 }
 
 @media (max-width: 600px) {
-    .hero {
+    /* .hero {
         background-image: none;
         background-color: var(--body-color);
-    }
+    } */
 
     .cards-section {
         position: relative;
-        z-index: 1;
+        z-index: 2;
         padding: 12.5vh 20px 60px 20px;
     }
 }
 
 /* TELEFOANE MICI */
 @media (max-width: 480px) {
-    .hero img {
-        max-width: 110px;
-        margin-bottom: 25px;
-    }
-
     .cards-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
