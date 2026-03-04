@@ -32,6 +32,8 @@
         <span><?= $t['nume_aplicatie'] ?></span>
       </a>
     </div>
+
+    
     <!-- Linkuri vizibile mereu -->
     <!-- <div class="main-links">
       <a href="index.php" class="nav-link <?= ($currentPage === 'index.php') ? 'active' : '' ?>">
@@ -82,7 +84,7 @@
 
       <!-- Language switch -->
       <div class="lang-switch">
-        <button class="lang-btn"><?= strtoupper($lang) ?> ▼</button>
+        <button class="lang-btn"><?= strtoupper($lang) ?> <span class="chevron"></span></button>
         <ul class="lang-dropdown">
           <li><a href="?lang=ro" class="lang-link">Română</a></li>
           <!-- <li><a href="?lang=en" class="lang-link">English</a></li> -->
@@ -136,24 +138,6 @@
     allCoursesSwitches.forEach(cs => cs.classList.remove('active'));
   });
 
-  // ---------- LOGO LA SCROLL ----------
-  // const logo = document.querySelector(".logo-img");
-
-  // // Stare inițială: logo mic + fade-out
-  // logo.classList.add("logo-fade");
-
-  // function updateLogo() {
-  //   if (window.scrollY === 0) {
-  //     // Ești sus → logo apare cu fade-in & zoom
-  //     logo.classList.remove("logo-fade");
-  //   } else {
-  //     // La scroll → logo devine discret, mic + fade-out
-  //     logo.classList.add("logo-fade");
-  //   }
-  // }
-
-  // window.addEventListener("scroll", updateLogo);
-  // updateLogo(); // rulează la încărcare
 
 
   // ---- HAMBURGER MENU ----
