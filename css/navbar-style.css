@@ -19,17 +19,22 @@ a {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 50%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     padding: 10px;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(20px);
     border: 1px solid rgb(0, 0, 0);
-    z-index: 9999;
+    z-index: 1;
+    transition: width 0.5s ease;
+}
+
+.nav.nav-shrink {
+    width: 30%;
 }
 
 .nav-bottom {
@@ -44,6 +49,7 @@ a {
     display: flex;
     gap: 5px;
     height: 100%;
+    cursor: pointer;
 }
 
 .nav-items .nav-item {
@@ -59,8 +65,9 @@ a {
 
 .nav-items .nav-item a {
     width: 100%;
-    text-align: center; /* link-ul să ocupe toată lățimea */
+    text-align: center;
 }
+
 
 .nav-items .nav-item:hover {
     border: 1px solid rgb(251, 251, 251);
@@ -68,6 +75,10 @@ a {
 
 .nav-items .nav-item:hover a {
     color: #fff;
+}
+
+.nav-item {
+    cursor: pointer;
 }
 
 @media (max-width: 900px) {

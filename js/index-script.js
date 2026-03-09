@@ -1,3 +1,4 @@
+// Cards animation
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -173,4 +174,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 250);
     });
 
+});
+
+// Navbar animation
+document.addEventListener("DOMContentLoaded", () => {
+    const nav = document.querySelector(".nav");
+
+    nav.style.width = "50%";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(nav, {
+        width: "30%",
+        duration: 0.3,
+        ease: "power1.out",
+        scrollTrigger: {
+            trigger: "body",
+            start: "top top",
+            end: 100,
+            scrub: true,
+        }
+    });
 });

@@ -13,12 +13,12 @@
 
 <body>
     <?php include __DIR__ . '/navbar.php'; ?>
-    <section class="intro">
-        <h1>Every idea begins as a single image</h1>
+    <section class="intro" id="intro">
+        <h1>Intro - about myself, picture, titles, work </h1>
     </section>
-    <section class="sticky">
+    <section class="sticky" id="sticky">
         <div class="sticky-header">
-            <h1>Three pillars with one purpose</h1>
+            <h1>My work experience</h1>
         </div>
 
         <div class="card-container">
@@ -28,7 +28,7 @@
                 </div>
                 <div class="card-back">
                     <span> ( 01 )</span>
-                    <p> Interactive Web Experiences</p>
+                    <p>Front-end Development</p>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
                 </div>
                 <div class="card-back">
                     <span> ( 02 )</span>
-                    <p>Thoughtful Design Language</p>
+                    <p>DevOps</p>
                 </div>
             </div>
 
@@ -48,16 +48,22 @@
                 </div>
                 <div class="card-back">
                     <span> ( 03 )</span>
-                    <p>Visual Design Systems</p>
+                    <p>Back-end Development</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="outro">
-        <h1>Every transition leave a trace</h1>
+    <section class="outro" id="outro">
+        <h1>Technical skills</h1>
+    </section>
+    <section class="outro" id="outro">
+        <h1>Expanded work experience</h1>
+    </section>
+    <section class="outro" id="outro">
+        <h1>Projects</h1>
     </section>
 
-    <script src="js/script.js"></script>
+    <script src="js/index-script.js"></script>
 </body>
 
 </html>
