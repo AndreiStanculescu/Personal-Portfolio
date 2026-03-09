@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <?php include __DIR__ . '/navbar.php'; ?>
     <section class="intro">
         <h1>Every idea begins as a single image</h1>
     </section>
