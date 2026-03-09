@@ -13,12 +13,26 @@
 
 <body>
     <?php include __DIR__ . '/navbar.php'; ?>
+
     <section class="intro" id="intro">
-        <h1>Intro - about myself, picture, titles, work </h1>
+        <img src="" alt="profile">
+        <div class="intro-text">
+            <p>Welcome to my Portfolio!</p>
+            <h1>Hello, I am Andrei.</h1>
+            <h2 class="role">DevOps Engineer | Full-Stack Developer</h2>
+            <h4>Contact details:</h4>
+            <p>Mail: andrei.florin.stanculescu@gmail.com<br>
+                Phone: +40722611727<br>
+                City: Bucharest<br>
+                GitHub: <a href="https://github.com/AndreiStanculescu" target="_blank">github.com/AndreiStanculescu</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/stanculescu-andrei-0309ab174" target="_blank">linkedin.com/in/stanculescu-andrei</a><br>
+            </p>
+        </div>
     </section>
+
     <section class="sticky" id="sticky">
         <div class="sticky-header">
-            <h1>My work experience</h1>
+            <h1>Technical skills:</h1>
         </div>
 
         <div class="card-container">
@@ -27,8 +41,14 @@
                     <img src="assets/1.jpg" alt="" />
                 </div>
                 <div class="card-back">
-                    <span> ( 01 )</span>
-                    <p>Front-end Development</p>
+                    <span>Front-end Development</span>
+                    <div class="icons">
+                        <img src="assets/php.png">
+                        <img src="assets/js.png">
+                        <img src="icons/html.svg">
+                        <img src="icons/css.svg">
+                    </div>
+                    <p></p>
                 </div>
             </div>
 
@@ -37,8 +57,11 @@
                     <img src="assets/2.jpg" alt="" />
                 </div>
                 <div class="card-back">
-                    <span> ( 02 )</span>
-                    <p>DevOps</p>
+                    <span>DevOps</span>
+                    <p></p>
+                    <img src="icons/java.svg">
+                    <img src="icons/spring.svg">
+                    <img src="icons/node.svg">
                 </div>
             </div>
 
@@ -47,18 +70,25 @@
                     <img src="assets/3.jpg" alt="" />
                 </div>
                 <div class="card-back">
-                    <span> ( 03 )</span>
-                    <p>Back-end Development</p>
+                    <span>Back-end Development</span>
+                    <p></p>
+                    <img src="icons/docker.svg">
+                    <img src="icons/kubernetes.svg">
+                    <img src="icons/aws.svg">
+                    <img src="icons/githubactions.svg">
                 </div>
             </div>
         </div>
     </section>
-    <section class="outro" id="outro">
+
+    <!-- <section class="outro" id="outro">
         <h1>Technical skills</h1>
-    </section>
+    </section> -->
+
     <section class="outro" id="outro">
         <h1>Expanded work experience</h1>
     </section>
+
     <section class="outro" id="outro">
         <h1>Projects</h1>
     </section>

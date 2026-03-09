@@ -1,7 +1,7 @@
  @import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
  :root {
-     --bg: #37cd57;
+     --bg: #000000;
      --fg: #fff;
      --card-1: #b2b2b2;
      --card-2: #ce2017;
@@ -14,11 +14,67 @@
      box-sizing: border-box;
  }
 
-
  body {
      font-family: "Instrument Serif", sans-serif;
  }
 
+ /* SECTION ONE  */
+ .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+.intro-text {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-text p:first-child {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.intro-text h1 {
+    font-size: 42px;
+    margin: 0 0 10px 0;
+}
+
+.role {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+
+.intro-text p:last-of-type {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.intro a {
+    font-size: inherit;
+    font-family: inherit;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.intro a:hover {
+    text-decoration: underline;
+}
+
+ /* CARDS - SECTION TWO */
  img {
      width: 100%;
      height: 100%;
@@ -129,6 +185,23 @@
      left: 2rem;
      opacity: 0.4;
  }
+
+.card-back .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 32px);
+    grid-auto-rows: 32px;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* toate iconițele */
+.card-back .icons img {
+    width: 24px;  
+    height: 24px;
+    object-fit: contain;
+}
 
  #card-1 .card-back {
      background-color: var(--card-1);
