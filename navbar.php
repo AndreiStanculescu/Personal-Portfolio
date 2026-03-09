@@ -4,13 +4,16 @@
     <div class="nav-bottom">
         <div class="nav-items">
             <div class="nav-item">
-                <a href="">Home</a>
+                <a href="#intro">Home</a>
+            </div>
+             <div class="nav-item">
+                <a href="#sticky">Technical skills</a>
             </div>
             <div class="nav-item">
-                <a href="">Work experience</a>
+                <a href="#experience">Work experience</a>
             </div>
             <div class="nav-item">
-                <a href="">Projects</a>
+                <a href="#projects">Projects</a>
             </div>
             <!-- <div class="nav-item">
                 <a href="#">Collections</a>
