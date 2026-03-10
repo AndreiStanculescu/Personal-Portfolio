@@ -1,15 +1,15 @@
 // Laptop script ca modul ES6
-import * as THREE from '/node_modules/three/build/three.module.js';
-import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
-import { gsap } from '/node_modules/gsap/index.js';
+import * as THREE from "three";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { gsap } from "/node_modules/gsap/index.js";
 
-import { vertexShader, fragmentShader } from './shaders.js';
+import { vertexShader, fragmentShader } from "./shaders.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const hero = document.querySelector(".hero");
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(30, innerWidth / innerHeight, 0.1, 1000);
-    camera.position.set(0, 0.15, 1);
+    const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 1000);
+    camera.position.set(0, 0.15, 5);
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -37,6 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const model = gltf.scene;
         const center = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
         model.position.sub(center);
+        model.rotation.y = -Math.PI / 2; 
+        model.scale.set(1, 1, 1);
         monitorGroup.add(model);
     });
 
@@ -101,8 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const displayPlane = new THREE.Mesh(createScreenGeometry(1, 1, 0.03), displayMaterial);
-    displayPlane.scale.set(0.28, 0.235, 1);
-    displayPlane.position.set(-0.008, 0.005, 0.041);
+    displayPlane.scale.set(4, 2.5, 1);
+    displayPlane.position.set(0.25, 0.1, -1.415);
     displayPlane.rotation.set(-0.18, 0, 0);
     monitorGroup.add(displayPlane);
 
@@ -122,8 +124,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animate();
 
-    camera.position.z = Math.max(1, 768 / innerWidth);
-
+    // camera.position.z = Math.max(1, 768 / innerWidth);
+    
     window.addEventListener("mousemove", (e) => {
         mouse.x = (e.clientX / innerWidth - 0.5) * 10;
         mouse.y = (e.clientY / innerHeight - 0.5) * 5;
