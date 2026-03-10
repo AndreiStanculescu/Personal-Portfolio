@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const model = gltf.scene;
         const center = new THREE.Box3().setFromObject(model).getCenter(new THREE.Vector3());
         model.position.sub(center);
-        model.rotation.y = -Math.PI / 2; 
+        model.rotation.y = -Math.PI / 2;
         model.scale.set(1, 1, 1);
         monitorGroup.add(model);
     });
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return texture;
     }
 
-    const defaultDisplayImg = "assets/2.jpg";
+    const defaultDisplayImg = "assets/2.png";
     const defaultTexture = loadTexture(defaultDisplayImg);
 
     const displayMaterial = new THREE.ShaderMaterial({
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     animate();
 
     // camera.position.z = Math.max(1, 768 / innerWidth);
-    
+
     window.addEventListener("mousemove", (e) => {
         mouse.x = (e.clientX / innerWidth - 0.5) * 10;
         mouse.y = (e.clientY / innerHeight - 0.5) * 5;
@@ -172,5 +172,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".projects").addEventListener("mouseleave", () => {
         setDisplayImage(defaultDisplayImg);
+    });
+
+    const zoomStep = 0.5;
+    const zoomMin = 3;
+    const zoomMax = 10;
+    const zoomDuration = 0.5;
+
+    document.getElementById("zoom-in").addEventListener("click", () => {
+        const targetZ = Math.max(zoomMin, camera.position.z - zoomStep);
+        gsap.to(camera.position, { z: targetZ, duration: zoomDuration, ease: "power2.out" });
+    });
+
+    document.getElementById("zoom-out").addEventListener("click", () => {
+        const targetZ = Math.min(zoomMax, camera.position.z + zoomStep);
+        gsap.to(camera.position, { z: targetZ, duration: zoomDuration, ease: "power2.out" });
     });
 });
