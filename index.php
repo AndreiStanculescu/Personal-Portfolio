@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
     <link rel="stylesheet" href="css/style-index.css">
 </head>
 
@@ -169,12 +171,23 @@
         </div>
     </section>
 
-    <!-- <section class="outro" id="outro">
-        <h1>Technical skills</h1>
-    </section> -->
-
     <section class="experience" id="experience">
-        <h1>Expanded work experience</h1>
+        <h1>Work experience</h1>
+        <div class="text">
+            <p class="role">DevOps Engineer - Info World</p>
+            <p class="description">• Designed and operated AWS cloud infrastructure for production healthcare applications using EC2, VPC, RDS, S3, MSK and IAM, ensuring high availability, scalability and security.<br>
+                • Automated infrastructure provisioning with Terraform (IaC), standardizing environments and significantly reducing deployment time and configuration drift.<br>
+                • Implemented configuration management with Ansible, eliminating manual server setup and improving release reliability.<br>
+                • Built Python and Bash automation scripts for operational tasks, monitoring and maintenance, reducing repetitive manual work.<br>
+                • Implemented monitoring, alerting and observability with Datadog, proactively detecting incidents and improving system uptime.<br>
+                • Deployed and administered Kafka, PostgreSQL and Couchbase clusters supporting data-intensive, high-traffic applications.<br>
+                • Managed containerized workloads using Docker and Kubernetes, improving scalability and simplifying deployments.<br>
+                • Designed and maintained CI/CD pipelines (GitHub/Bitbucket), enabling faster and safer releases.<br>
+                • Partnered with international stakeholders (Romania & US) to deliver reliable infrastructure solutions and production support.<br>
+            </p>
+
+        </div>
+
     </section>
 
     <section class="projects" id="projects">

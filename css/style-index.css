@@ -27,8 +27,7 @@
      color: var(--fg);
  }
 
- /* SECTION ONE */
-
+ /* SECTION INTRO */
  .intro {
      display: flex;
      align-items: center;
@@ -92,7 +91,7 @@
      text-decoration: underline;
  }
 
- /* CARDS - SECTION TWO */
+ /* SECTION STICKY (CARDS) */
  .sticky {
      display: flex;
      justify-content: center;
@@ -241,9 +240,28 @@
      background-color: var(--card-3);
  }
 
+/* SECTION EXPERIENCE */
+.experience h1 {
+    text-align: center;
+    margin-bottom:5rem;
+} 
+
+.experience .role {
+    color:red;
+    margin-bottom: 2rem;
+}
+
+.experience .description {
+    color: blue;
+}
 
 
 
+
+/* SECTION PROJECTS */
+.projects h1 {
+    text-align: center;
+} 
 
 
 

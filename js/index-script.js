@@ -1,8 +1,10 @@
+let lenis;
+
 // Cards animation
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const lenis = new Lenis();
+    lenis = new Lenis();
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
@@ -31,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ScrollTrigger.create({
                 trigger: ".sticky",
                 start: "top top",
-                end: `+=${window.innerHeight * 4}px`,
+                end: `+=${window.innerHeight * 3}px`,
                 scrub: 1,
                 pin: true,
                 pinSpacing: true,
@@ -194,5 +196,31 @@ document.addEventListener("DOMContentLoaded", () => {
             end: 100,
             scrub: true,
         }
+    });
+});
+
+// Section snap 
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+
+    sections.forEach((section) => {
+        ScrollTrigger.create({
+            trigger: section,
+            start: "top center",
+            end: "bottom center",
+            onUpdate: (self) => {
+                if (self.progress > 0.1 && !self.snapTriggered) {
+                    lenis.scrollTo(section, { duration: 0.6, offset: 0 });
+                    self.snapTriggered = true;
+                }
+                if (self.progress < 0.9 && !self.snapTriggeredBack) {
+                    lenis.scrollTo(section, { duration: 0.6, offset: 0 });
+                    self.snapTriggeredBack = true;
+                }
+
+                if (self.progress === 0) self.snapTriggeredBack = false;
+                if (self.progress === 1) self.snapTriggered = false;
+            }
+        });
     });
 });
