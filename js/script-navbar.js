@@ -20,26 +20,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Hide navbar on certain sections
-document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.getElementById("navbar");
-    const projectSection = document.querySelector(".project");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const navbar = document.getElementById("navbar");
+//     const projectSection = document.querySelector(".projects");
 
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    navbar.style.opacity = "0";
-                    navbar.style.pointerEvents = "none"; 
-                } else {
-                    navbar.style.opacity = "1";
-                    navbar.style.pointerEvents = "auto";
-                }
-            });
-        },
-        {
-            threshold: 0.5
-        }
-    );
+//     const observer = new IntersectionObserver(
+//         (entries) => {
+//             entries.forEach(entry => {
+//                 if (entry.isIntersecting) {
+//                     navbar.style.opacity = "0";
+//                     navbar.style.pointerEvents = "none"; 
+//                 } else {
+//                     navbar.style.opacity = "1";
+//                     navbar.style.pointerEvents = "auto";
+//                 }
+//             });
+//         },
+//         {
+//             threshold: 0.5
+//         }
+//     );
 
-    observer.observe(projectSection);
-});
+//     observer.observe(projectSection);
+// });

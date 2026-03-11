@@ -14,7 +14,7 @@
                 <a href="#experience">Work experience</a>
             </div>
             <div class="nav-item">
-                <a href="#projects">Projects</a>
+                <a href="#project">Projects</a>
             </div>
             <!-- <div class="nav-item">
                 <a href="#">Collections</a>

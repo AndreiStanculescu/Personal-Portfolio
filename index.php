@@ -23,6 +23,8 @@
 
     <?php include __DIR__ . '/section3.html'; ?>
 
+    <?php include __DIR__ . '/section4.html'; ?>
+
     <script src="js/index-script.js"></script>
     <script>
         let lenis = new Lenis();

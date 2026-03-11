@@ -8,6 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 // });
 // gsap.ticker.lagSmoothing(0);
 
+
+
 const cardContainer = document.querySelector(".card-container");
 const stickyHeader = document.querySelector(".sticky-header h1");
 let isGapAnimationCompleted = false;
