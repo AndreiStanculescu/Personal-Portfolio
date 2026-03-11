@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     gsap.to(nav, {
         width: "30%",
-        duration: 0.3,
+        duration: 0.5,
         ease: "power1.out",
         scrollTrigger: {
             trigger: "body",
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Hide navbar on certain sections
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.getElementById("navbar");
     const projectSection = document.querySelector(".project");
