@@ -1,3 +1,4 @@
+<script src="/js/script-navbar.js"></script>
 <link rel="stylesheet" href="css/style-navbar.css" />
 <div class="nav" id="navbar">
 
