@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { vertexShader, fragmentShader } from "./shaders.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-    const hero = document.querySelector(".hero");
+    const hero = document.querySelector(".project");
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 1000);
     camera.position.set(0, 0.15, 5);
@@ -163,14 +163,14 @@ document.addEventListener("DOMContentLoaded", () => {
         texture.image ? updateAspect() : texture.addEventListener("load", updateAspect);
     }
 
-    document.querySelectorAll(".projects li").forEach((li) => {
+    document.querySelectorAll(".projects-list li").forEach((li) => {
         li.addEventListener("mouseenter", () => {
             const img = li.getAttribute("data-img");
             if (img) setDisplayImage(img);
         });
     });
 
-    document.querySelector(".projects").addEventListener("mouseleave", () => {
+    document.querySelector(".projects-list").addEventListener("mouseleave", () => {
         setDisplayImage(defaultDisplayImg);
     });
 

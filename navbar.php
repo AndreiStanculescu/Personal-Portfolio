@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/style-navbar.css" />
-<div class="nav">
+<div class="nav" id="navbar">
 
     <div class="nav-bottom">
         <div class="nav-items">

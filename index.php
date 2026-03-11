@@ -11,6 +11,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
     <link rel="stylesheet" href="css/style-index.css">
+    <link rel="stylesheet" href="css/style-laptop.css">
 </head>
 
 <body>
@@ -185,16 +186,41 @@
                 • Designed and maintained CI/CD pipelines (GitHub/Bitbucket), enabling faster and safer releases.<br>
                 • Partnered with international stakeholders (Romania & US) to deliver reliable infrastructure solutions and production support.<br>
             </p>
-
         </div>
-
     </section>
 
-    <section class="projects" id="projects">
-        <h1>Projects</h1>
-    </section>
+    <!-- LAPTOP -->
+    <!-- <section class="project">
+        <ul class="projects-list">
+            <li data-img="assets/screen1.jpg">1</li>
+            <li data-img="assets/screen2.jpg">2</li>
+            <li data-img="assets/screen3.jpg">3</li>
+            <li data-img="assets/screen4.jpg">4</li>
+            <li data-img="assets/screen5.jpg">5</li>
+        </ul>
+
+        <div class="zoom-controls">
+            <button id="zoom-in">+</button>
+            <button id="zoom-out">-</button>
+        </div>
+    </section> -->
 
     <script src="js/index-script.js"></script>
+    <!-- NAVBAR -->
+    <script src="/js/navbar-script.js"></script>
+    <!-- LAPTOP -->
+    <!-- <script type="importmap">
+        {
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+    "gsap": "https://unpkg.com/gsap@3.12.5/index.js"
+    }
+    }
+    </script>
+    <script type="module" src="./js/laptop-script.js"></script> -->
+ 
+
 </body>
 
 </html>

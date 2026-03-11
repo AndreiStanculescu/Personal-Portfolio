@@ -81,6 +81,11 @@ a {
     cursor: pointer;
 }
 
+/* Fade out */
+#navbar {
+    transition: opacity 0.5s ease;
+}
+
 @media (max-width: 900px) {
     .nav {
         bottom: 0;
