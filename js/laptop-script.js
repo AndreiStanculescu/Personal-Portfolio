@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return texture;
     }
 
-    const defaultDisplayImg = "assets/2.png";
+    const defaultDisplayImg = "assets/screen1.jpg";
     const defaultTexture = loadTexture(defaultDisplayImg);
 
     const displayMaterial = new THREE.ShaderMaterial({
@@ -103,8 +103,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const displayPlane = new THREE.Mesh(createScreenGeometry(1, 1, 0.03), displayMaterial);
-    displayPlane.scale.set(4, 2.5, 1);
-    displayPlane.position.set(0.25, 0.1, -1.415);
+    displayPlane.scale.set(3.9, 2.3, 1);
+    displayPlane.position.set(0.2, 0.2, -1.47);
     displayPlane.rotation.set(-0.18, 0, 0);
     monitorGroup.add(displayPlane);
 
