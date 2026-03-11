@@ -1,7 +1,7 @@
 // Laptop script ca modul ES6
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { gsap } from "/node_modules/gsap/index.js";
+import { gsap } from "gsap";
 
 import { vertexShader, fragmentShader } from "./shaders.js";
 
