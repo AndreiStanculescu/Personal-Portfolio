@@ -69,7 +69,7 @@ window.addEventListener("resize", () => {
 ScrollTrigger.create({
   trigger: ".spotlight",
   start: "start",
-  end: `+=${window.innerHeight * 3}px`,
+  end: `+=${window.innerHeight * 2.5}px`,
   pin: true,
   pinSpacing: true,
   scrub: 1,
