@@ -26,14 +26,21 @@
 
     <script src="js/index-script.js"></script>
     <script>
-        let lenis = new Lenis();
-        lenis.on("scroll", ScrollTrigger.update);
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000);
+        const lenis = new Lenis({
+            duration: 1,
+            easing: (t) => t,
+            lerp: 0.05,
+            smooth: true,
+            smoothTouch: true,
         });
-        gsap.ticker.lagSmoothing(0);
+        lenis.on("scroll", ScrollTrigger.update);
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
     </script>
 </body>
 
 </html>
-
