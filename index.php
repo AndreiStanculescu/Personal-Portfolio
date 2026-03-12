@@ -19,11 +19,11 @@
 
     <?php include __DIR__ . '/section1.html'; ?>
 
-    <?php  include __DIR__ . '/section2.html'; ?>
+    <?php include __DIR__ . '/section2.html'; ?>
 
-    <?php //  include __DIR__ . '/section3.html'; ?>
+    <?php include __DIR__ . '/section3.html'; ?>
 
-    <?php // include __DIR__ . '/section4.html'; ?>
+    <?php  include __DIR__ . '/section4.html'; ?>
 
     <script src="js/index-script.js"></script>
     <script>

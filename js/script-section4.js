@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   gsap.ticker.lagSmoothing(0);
 
-  const animeTextParagraphs = document.querySelectorAll(".anime-text p");
+  const animeTextParagraphs = document.querySelectorAll(".text-container p");
 
   const wordHighlightBgColor = "60, 60, 60";
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       onUpdate: (self) => {
         const progress = self.progress;
         const words = Array.from(
-          container.querySelectorAll(".anime-text .word")
+          container.querySelectorAll(".text-container .word")
         );
         const totalWords = words.length;
 

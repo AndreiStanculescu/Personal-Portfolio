@@ -46,7 +46,7 @@
 }
 
 .spotlight p {
-  font-family: "Instrument Serif";
+  font-family: "Instrument Serif", sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1;
@@ -145,7 +145,7 @@
 
 .spotlight .feature-content p {
   text-transform: uppercase;
-  font-family: "Instrument Serif";
+  font-family: "Instrument Serif", sans-serif;
   font-weight: 400;
   font-size: 0.85rem;
   line-height: 1;

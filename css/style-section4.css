@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
 
 * {
   margin: 0;
@@ -32,28 +32,16 @@
   line-height: 1;
 }
 
-.hero .copy-container {
-  background: #fe6d38;
-}
-
-.cta .copy-container {
-  background: #c6fe69;
-}
-
-.outro .copy-container {
-  background: #7a78ff;
-}
-
 .section4 .copy-container,
 .features .copy-container {
   border: 0.15rem dashed rgb(60, 60, 60);
 }
 
-.anime-text {
+.text-container {
   width: 60%;
 }
 
-.anime-text p {
+.text-container p {
   color: #fff;
   text-align: center;
   margin-bottom: 2rem;
@@ -62,7 +50,7 @@
   line-height: 1;
 }
 
-.anime-text .word {
+.text-container .word {
   display: inline-block;
   position: relative;
   margin-right: 0.2rem;
@@ -72,15 +60,15 @@
   will-change: background-color, opacity;
 }
 
-.anime-text .word.keyword-wrapper {
+.text-container .word.keyword-wrapper {
   margin: 0 0.4rem 0.2rem 0.2rem;
 }
 
-.anime-text .word span {
+.text-container .word span {
   position: relative;
 }
 
-.anime-text .word span.keyword {
+.text-container .word span.keyword {
   border-radius: 2rem;
   display: inline-block;
   width: 100%;
@@ -89,7 +77,7 @@
   color: #141414;
 }
 
-.anime-text .word span.keyword::before {
+.text-container .word span.keyword::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -102,26 +90,26 @@
   z-index: -1;
 }
 
-.anime-text .word span.keyword.vibrant::before,
-.anime-text .word span.keyword.shape::before,
-.anime-text .word span.keyword.interactive::before {
+.text-container .word span.keyword.vibrant::before,
+.text-container .word span.keyword.shape::before,
+.text-container .word span.keyword.interactive::before {
   background-color: #7a78ff;
 }
 
-.anime-text .word span.keyword.living::before,
-.anime-text .word span.keyword.expression::before,
-.anime-text .word span.keyword.storytelling::before {
+.text-container .word span.keyword.living::before,
+.text-container .word span.keyword.expression::before,
+.text-container .word span.keyword.storytelling::before {
   background-color: #fe6d38;
 }
 
-.anime-text .word span.keyword.clarity::before,
-.anime-text .word span.keyword.intuitive::before,
-.anime-text .word span.keyword.vision::before {
+.text-container .word span.keyword.clarity::before,
+.text-container .word span.keyword.intuitive::before,
+.text-container .word span.keyword.vision::before {
   background-color: #c6fe69;
 }
 
-.anime-text .word,
-.anime-text .word span {
+.text-container .word,
+.text-container .word span {
   opacity: 0;
 }
 
@@ -131,21 +119,21 @@
     font-size: 2rem;
   }
 
-  .anime-text {
+  .text-container {
     width: 90%;
   }
 
-  .anime-text p {
+  .text-container p {
     font-size: 1.25rem;
   }
 
-  .anime-text .word {
+  .text-container .word {
     margin-right: 0.1rem;
     margin-bottom: 0.15rem;
     padding: 0.1rem 0.2rem;
   }
 
-  .anime-text .word.keyword-wrapper {
+  .text-container .word.keyword-wrapper {
     margin: 0 0.2rem 0.1rem 0.1rem;
   }
 }
