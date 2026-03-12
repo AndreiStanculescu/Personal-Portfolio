@@ -8,17 +8,14 @@
                 <a href="#intro">Home</a>
             </div>
              <div class="nav-item">
-                <a href="#sticky">Technical skills</a>
+                <a href="#spotlight">Technical skills</a>
             </div>
             <div class="nav-item">
-                <a href="#experience">Work experience</a>
+                <a href="#sticky">Professional experience</a>
             </div>
             <div class="nav-item">
-                <a href="#project">Projects</a>
+                <a href="#section4">Projects</a>
             </div>
-            <!-- <div class="nav-item">
-                <a href="#">Collections</a>
-            </div> -->
         </div>
     </div>
 </div>

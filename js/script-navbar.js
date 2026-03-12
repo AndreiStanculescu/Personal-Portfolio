@@ -19,6 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.querySelectorAll('.nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+
+        if (target) {
+            lenis.scrollTo(target, {
+                duration: 0.2,
+                easing: (t) => 1 - Math.pow(1 - t, 4),
+                lock: true
+            });
+        }
+    });
+});
+
 // Hide navbar on certain sections
 // document.addEventListener("DOMContentLoaded", () => {
 //     const navbar = document.getElementById("navbar");
@@ -29,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //             entries.forEach(entry => {
 //                 if (entry.isIntersecting) {
 //                     navbar.style.opacity = "0";
-//                     navbar.style.pointerEvents = "none"; 
+//                     navbar.style.pointerEvents = "none";
 //                 } else {
 //                     navbar.style.opacity = "1";
 //                     navbar.style.pointerEvents = "auto";
