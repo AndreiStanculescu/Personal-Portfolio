@@ -7,15 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const wordHighlightBgColor = "60, 60, 60";
 
   const keywords = [
-    "vibrant",
-    "living",
-    "clarity",
-    "expression",
-    "shape",
-    "intuitive",
-    "storytelling",
-    "interactive",
-    "vision",
+    
   ];
 
   animeTextParagraphs.forEach((paragraph) => {

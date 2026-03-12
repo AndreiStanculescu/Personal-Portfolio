@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     /* margin-top: 300vh; */
-    /* ajustează după morph + section2 */
 }
 
 
@@ -97,6 +96,22 @@
 }
 
 
+.sticky .card-back span {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+.sticky .card-back p {
+    font-size: 22px;
+    line-height: 1.7rem;
+    padding: 0px 16px 0px 0px;
+
+}
+
+
 .sticky #card-1 {
     border-radius: 20px 0 0 20px;
 }
@@ -141,7 +156,7 @@
 
 .sticky #card-1 .card-back {
     background-color: var(--card-1);
-    color: var(--bg);
+    
 }
 
 .sticky #card-2 .card-back {

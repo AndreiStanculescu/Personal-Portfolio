@@ -4,8 +4,8 @@
      --bg: #000000;
      --fg: #fff;
      --card-1: #4c9668;
-     --card-2: #ce2017;
-     --card-3: #2f2f2f;
+     --card-2: #ac2922;
+     --card-3: #2f2d96;
  }
 
  * {
@@ -15,7 +15,7 @@
  }
 
  body {
-    font-family: "Instrument Serif", sans-serif;
+     font-family: "Instrument Serif", sans-serif;
  }
 
  section {
@@ -51,25 +51,26 @@
  }
 
  .intro-text p:first-child {
-     font-size: 18px;
+     font-size: 24px;
      color: #888;
      margin-bottom: 8px;
  }
 
  .intro-text h1 {
-     font-size: 2.5rem;
+     font-size: 3rem;
      margin-bottom: 10px;
      white-space: nowrap;
  }
 
  .intro .role {
-     font-size: 22px;
+     font-size: 2rem;
      font-weight: 600;
      margin-bottom: 20px;
  }
 
  .intro-text h4 {
      margin-bottom: 10px;
+     font-size: 1.5rem;
  }
 
  .intro .contact {
@@ -78,11 +79,12 @@
  }
 
  .intro .contact li {
-     font-size: 16px;
+     font-size: 1.2rem;
      line-height: 1.6;
  }
 
  .intro a {
+     font-size: 1.2rem;
      color: white;
      text-decoration: none;
  }
