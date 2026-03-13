@@ -3,6 +3,8 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
+const mm = gsap.matchMedia();
+let featureStartPositions = [];
 // const lenis = new Lenis();
 // lenis.on("scroll", ScrollTrigger.update);
 // gsap.ticker.add((time) => {
@@ -13,32 +15,102 @@ gsap.registerPlugin(ScrollTrigger);
 const features = document.querySelectorAll(".feature");
 const featureBgs = document.querySelectorAll(".feature-bg");
 
-const featureStartPositions = [
-  { top: 25, left: 15 },
-  { top: 12.5, left: 50 },
-  { top: 22.5, left: 75 },
-  { top: 30, left: 82.5 },
-  { top: 50, left: 20 },
-  { top: 80, left: 20 },
-  { top: 75, left: 75 },
-  { top: 35, left: 25 },
-  { top: 65, left: 35 },
-  { top: 72, left: 10 },
-  { top: 15, left: 65 },
-  { top: 30, left: 70 },
-  { top: 50, left: 80 },
-  { top: 67.5, left: 85 },
-  { top: 85, left: 90 },
-  { top: 22.5, left: 37.5 },
-];
 
-features.forEach((feature, index) => {
-  const featurePos = featureStartPositions[index];
-  gsap.set(feature, {
-    top: `${featurePos.top}%`,
-    left: `${featurePos.left}%`,
+
+mm.add("(min-width: 1001px)", () => {
+
+  featureStartPositions = [
+    { top: 25, left: 15 },
+    { top: 12.5, left: 50 },
+    { top: 22.5, left: 75 },
+    { top: 30, left: 82.5 },
+    { top: 50, left: 20 },
+    { top: 80, left: 20 },
+    { top: 75, left: 75 },
+    { top: 35, left: 25 },
+    { top: 65, left: 35 },
+    { top: 72, left: 10 },
+    { top: 15, left: 65 },
+    { top: 30, left: 70 },
+    { top: 50, left: 80 },
+    { top: 67.5, left: 85 },
+    { top: 85, left: 90 },
+    { top: 22.5, left: 37.5 },
+  ];
+
+  features.forEach((feature, index) => {
+    const featurePos = featureStartPositions[index];
+    gsap.set(feature, {
+      top: `${featurePos.top}%`,
+      left: `${featurePos.left}%`,
+    });
   });
 });
+
+
+
+
+// Smaller displays
+mm.add("(max-width: 1000px) and (min-width: 501px)", () => {
+
+  const features = document.querySelectorAll(".feature");
+
+  featureStartPositions = [
+    { top: 20, left: 20 },
+    { top: 20, left: 50 },
+    { top: 20, left: 80 },
+    { top: 40, left: 20 },
+    { top: 40, left: 50 },
+    { top: 40, left: 80 },
+    { top: 60, left: 20 },
+    { top: 60, left: 50 },
+    { top: 60, left: 80 },
+    { top: 80, left: 20 },
+    { top: 80, left: 50 },
+    { top: 80, left: 80 },
+    { top: 30, left: 40 },
+    { top: 25, left: 25 },
+    { top: 35, left: 45 },
+    { top: 40, left: 55 },
+  ];
+
+  features.forEach((feature, index) => {
+    const featurePos = featureStartPositions[index];
+    gsap.set(feature, {
+      top: `${featurePos.top}%`,
+      left: `${featurePos.left}%`,
+    });
+  });
+
+});
+
+mm.add("(max-width: 500px)", () => {
+
+  const features = document.querySelectorAll(".feature");
+
+  features.forEach((feature, index) => {
+    const featurePos = featureStartPositions[index];
+
+    const row = Math.floor(index / 3);
+    const col = index % 3;
+
+    const top = 5 + row * 20;
+    const left = 20 + col * 30;
+
+    featureStartPositions.push({
+      top: top,
+      left: left
+    });
+
+    gsap.set(feature, {
+      top: `${top}%`,
+      left: `${left}%`
+    });
+
+  });
+
+});
+
 
 const featureStartDimensions = [];
 featureBgs.forEach((bg) => {
@@ -91,7 +163,8 @@ ScrollTrigger.create({
       const featureProgress = progress / 0.5;
 
       features.forEach((feature, index) => {
-        const original = featureStartPositions[index];
+        // const original = featureStartPositions[index];
+        const original = featureStartPositions[index % featureStartPositions.length];
         const currentTop =
           original.top + (50 - original.top) * featureProgress;
         const currentLeft =
@@ -201,4 +274,3 @@ ScrollTrigger.create({
     }
   },
 });
-
