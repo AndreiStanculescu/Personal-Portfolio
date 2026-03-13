@@ -1,22 +1,61 @@
 // Navbar animation
 document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".nav");
-
-    nav.style.width = "50%";
-
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to(nav, {
-        width: "30%",
-        duration: 0.5,
-        ease: "power1.out",
-        scrollTrigger: {
-            trigger: "body",
-            start: "top top",
-            end: 500,
-            scrub: true,
-        }
-    });
+    // breakpoint >1000px
+    if (window.innerWidth > 1000) {
+        const targetWidth = "30%"; 
+
+        // 50% -> 30%
+        gsap.to(nav, {
+            width: targetWidth,
+            duration: 0.5,
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: 500,
+                scrub: true,
+            }
+        });
+    }
+
+    // breakpoint <1000px
+    else if (window.innerWidth <= 1000 && window.innerWidth > 500) {
+        const targetWidth = "50%";
+
+        // 70% -> 50%
+        gsap.to(nav, {
+            width: targetWidth,
+            duration: 0.5,
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: 500,
+                scrub: true,
+            }
+        });
+    }
+
+    // breakpoint <500px
+    else {
+        const targetWidth = "70%";
+
+        // 90% -> 70%
+        gsap.to(nav, {
+            width: targetWidth,
+            duration: 0.5,
+            ease: "power1.out",
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: 500,
+                scrub: true,
+            }
+        });
+    }
 });
 
 document.querySelectorAll('.nav a').forEach(anchor => {
