@@ -35,9 +35,6 @@ a {
     transition: width 0.5s ease;
 }
 
-.nav.nav-shrink {
-    width: 30%;
-}
 
 .nav-bottom {
     width: 100%;
@@ -88,9 +85,7 @@ a {
     transition: opacity 0.5s ease;
 }
 
-
-
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
 
     .nav {
         width: 70%;
@@ -99,8 +94,28 @@ a {
         border-radius: 8px;
     }
 
-    .nav.nav-shrink {
-        width: 50%;
+    .nav-items {
+        gap: 4px;
+    }
+
+    .nav-items .nav-item {
+        height: 100%;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .nav-items .nav-item a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .nav {
+        width: 80%;
+        height: 55px;
+        padding: 8px;
+        border-radius: 8px;
     }
 
     .nav-items {
@@ -121,16 +136,12 @@ a {
 @media (max-width: 500px) {
 
     .nav {
-        width: 90%;
+        width: 100%;
         height: 60px;
         padding: 6px;
         border-radius: 6px;
         left: 50%;
         bottom: 3%;
-    }
-
-    .nav.nav-shrink {
-        width: 80%;
     }
 
     .nav-items {

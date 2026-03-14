@@ -3,59 +3,52 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".nav");
     gsap.registerPlugin(ScrollTrigger);
 
-    // breakpoint >1000px
-    if (window.innerWidth > 1000) {
-        const targetWidth = "30%"; 
+    let startWidth;
+    let targetWidth;
 
-        // 50% -> 30%
-        gsap.to(nav, {
-            width: targetWidth,
-            duration: 0.5,
-            ease: "power1.out",
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: 500,
-                scrub: true,
-            }
-        });
+    // 1500+
+    if (window.innerWidth > 1500) {
+        startWidth = "50%";
+        targetWidth = "30%";
     }
 
-    // breakpoint <1000px
-    else if (window.innerWidth <= 1000 && window.innerWidth > 500) {
-        const targetWidth = "50%";
-
-        // 70% -> 50%
-        gsap.to(nav, {
-            width: targetWidth,
-            duration: 0.5,
-            ease: "power1.out",
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: 500,
-                scrub: true,
-            }
-        });
+    // 1200-1500
+    if (window.innerWidth > 1200) {
+        startWidth = "60%";
+        targetWidth = "45%";
     }
 
-    // breakpoint <500px
+    // 1000-1200
+    else if (window.innerWidth > 1000) {
+        startWidth = "70%";
+        targetWidth = "50%";
+    }
+
+    // 500-1000
+    else if (window.innerWidth > 500) {
+        startWidth = "80%";
+        targetWidth = "60%";
+    }
+
+    // 500-
     else {
-        const targetWidth = "70%";
-
-        // 90% -> 70%
-        gsap.to(nav, {
-            width: targetWidth,
-            duration: 0.5,
-            ease: "power1.out",
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: 500,
-                scrub: true,
-            }
-        });
+        startWidth = "100%";
+        targetWidth = "80%";
     }
+
+    gsap.set(nav, { width: startWidth });
+
+    gsap.to(nav, {
+        width: targetWidth,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "body",
+            start: "top top",
+            end: 500,
+            scrub: true
+        }
+    });
+
 });
 
 document.querySelectorAll('.nav a').forEach(anchor => {

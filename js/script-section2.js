@@ -4,122 +4,121 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const mm = gsap.matchMedia();
-let featureStartPositions = [];
-// const lenis = new Lenis();
-// lenis.on("scroll", ScrollTrigger.update);
-// gsap.ticker.add((time) => {
-//   lenis.raf(time * 1000);
-// });
-// gsap.ticker.lagSmoothing(0);
-
 const features = document.querySelectorAll(".feature");
 const featureBgs = document.querySelectorAll(".feature-bg");
+let headerFinalY = -10;
 
+function setFeaturePositions(positions) {
+  features.forEach((feature, index) => {
+    const featurePos = positions[index];
+    gsap.set(feature, {
+      top: `${featurePos.top}%`,
+      left: `${featurePos.left}%`,
+    });
+  });
+}
 
+let featureStartPositions = [
+  { top: 25, left: 15 }, //Python
+  { top: 12.5, left: 50 },  //Bash
+  { top: 22.5, left: 75 },  //MySQL
+  { top: 30, left: 85.5 },  //PHP
+  { top: 50, left: 20 },  //Javascript
+  { top: 80, left: 20 },  //HTML5
+  { top: 75, left: 75 },  //CSS3
+  { top: 35, left: 25 },  //GIT
+  { top: 65, left: 35 },  //Linux
+  { top: 72, left: 10 },  //Docker
+  { top: 15, left: 65 },  //jQuery
+  { top: 30, left: 60 },  //Ansible
+  { top: 50, left: 80 },  //Terraform
+  { top: 67.5, left: 85 },  //CI/CD
+  { top: 85, left: 90 },  //Kubernetes
+  { top: 22.5, left: 37.5 },  //AWS
+];
+// 1200+
+mm.add("(min-width: 1200px)", () => {
+  setFeaturePositions(featureStartPositions);
+});
 
+// 1001-1200
 mm.add("(min-width: 1001px)", () => {
 
-  featureStartPositions = [
-    { top: 25, left: 15 },
-    { top: 12.5, left: 50 },
-    { top: 22.5, left: 75 },
-    { top: 30, left: 82.5 },
-    { top: 50, left: 20 },
-    { top: 80, left: 20 },
-    { top: 75, left: 75 },
-    { top: 35, left: 25 },
-    { top: 65, left: 35 },
-    { top: 72, left: 10 },
-    { top: 15, left: 65 },
-    { top: 30, left: 70 },
-    { top: 50, left: 80 },
-    { top: 67.5, left: 85 },
-    { top: 85, left: 90 },
-    { top: 22.5, left: 37.5 },
-  ];
+  setFeaturePositions(featureStartPositions);
+  headerFinalY = -50;
 
-  features.forEach((feature, index) => {
-    const featurePos = featureStartPositions[index];
-    gsap.set(feature, {
-      top: `${featurePos.top}%`,
-      left: `${featurePos.left}%`,
-    });
-  });
 });
 
-
-
-
-// Smaller displays
+// 501-1000
 mm.add("(max-width: 1000px) and (min-width: 501px)", () => {
 
-  const features = document.querySelectorAll(".feature");
+  // featureStartPositions = [
+  //   { top: 20, left: 20 },
+  //   { top: 20, left: 50 },
+  //   { top: 20, left: 80 },
+  //   { top: 40, left: 20 },
+  //   { top: 40, left: 50 },
+  //   { top: 40, left: 80 },
+  //   { top: 60, left: 20 },
+  //   { top: 60, left: 50 },
+  //   { top: 60, left: 80 },
+  //   { top: 80, left: 20 },
+  //   { top: 80, left: 50 },
+  //   { top: 80, left: 80 },
+  //   { top: 30, left: 40 },
+  //   { top: 25, left: 25 },
+  //   { top: 35, left: 45 },
+  //   { top: 40, left: 55 },
+  // ];
 
-  featureStartPositions = [
-    { top: 20, left: 20 },
-    { top: 20, left: 50 },
-    { top: 20, left: 80 },
-    { top: 40, left: 20 },
-    { top: 40, left: 50 },
-    { top: 40, left: 80 },
-    { top: 60, left: 20 },
-    { top: 60, left: 50 },
-    { top: 60, left: 80 },
-    { top: 80, left: 20 },
-    { top: 80, left: 50 },
-    { top: 80, left: 80 },
-    { top: 30, left: 40 },
-    { top: 25, left: 25 },
-    { top: 35, left: 45 },
-    { top: 40, left: 55 },
-  ];
-
-  features.forEach((feature, index) => {
-    const featurePos = featureStartPositions[index];
-    gsap.set(feature, {
-      top: `${featurePos.top}%`,
-      left: `${featurePos.left}%`,
-    });
-  });
+  setFeaturePositions(featureStartPositions);
 
 });
 
+// 500-
 mm.add("(max-width: 500px)", () => {
 
-  const features = document.querySelectorAll(".feature");
+   headerFinalY = 30;
+  featureStartPositions = [
+    { top: 25, left: 15 }, //Python
+    { top: 12.5, left: 50 },  //Bash
+    { top: 22.5, left: 75 },  //MySQL
+    { top: 30, left: 85.5 },  //PHP
+    { top: 50, left: 20 },  //Javascript
+    { top: 80, left: 20 },  //HTML5
+    { top: 75, left: 75 },  //CSS3
+    { top: 35, left: 25 },  //GIT
+    { top: 65, left: 35 },  //Linux
+    { top: 72, left: 10 },  //Docker
+    { top: 15, left: 65 },  //jQuery
+    { top: 30, left: 60 },  //Ansible
+    { top: 50, left: 90 },  //Terraform
+    { top: 67.5, left: 85 },  //CI/CD
+    { top: 77.5, left: 90 },  //Kubernetes
+    { top: 22.5, left: 37.5 },  //AWS
+  ];
 
-  features.forEach((feature, index) => {
-    const featurePos = featureStartPositions[index];
-
-    const row = Math.floor(index / 3);
-    const col = index % 3;
-
-    const top = 5 + row * 20;
-    const left = 20 + col * 30;
-
-    featureStartPositions.push({
-      top: top,
-      left: left
-    });
-
-    gsap.set(feature, {
-      top: `${top}%`,
-      left: `${left}%`
-    });
-
-  });
+  setFeaturePositions(featureStartPositions);
 
 });
 
 
-const featureStartDimensions = [];
-featureBgs.forEach((bg) => {
-  const rect = bg.getBoundingClientRect();
-  featureStartDimensions.push({
-    width: rect.width,
-    height: rect.height,
+let featureStartDimensions = [];
+
+function calculateFeatureDimensions() {
+  featureStartDimensions = [];
+
+  featureBgs.forEach((bg) => {
+    const rect = bg.getBoundingClientRect();
+
+    featureStartDimensions.push({
+      width: rect.width,
+      height: rect.height
+    });
   });
-});
+}
+
+calculateFeatureDimensions();
 
 const remInPixels = parseFloat(
   getComputedStyle(document.documentElement).fontSize
@@ -135,6 +134,7 @@ let searchBarFinalWidth = getSearchBarFinalWidth();
 
 window.addEventListener("resize", () => {
   searchBarFinalWidth = getSearchBarFinalWidth();
+  calculateFeatureDimensions();
   ScrollTrigger.refresh();
 });
 
@@ -259,8 +259,10 @@ ScrollTrigger.create({
         opacity: finalHeaderProgress,
       });
 
+      const currentY = -50 + (headerFinalY + 50) * finalHeaderProgress;
+
       gsap.set(".header-content", {
-        y: -50 + 50 * finalHeaderProgress,
+        y: currentY,
         opacity: finalHeaderProgress,
       });
     } else {
