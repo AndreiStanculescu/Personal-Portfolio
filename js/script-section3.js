@@ -101,7 +101,7 @@ function initAnimations() {
                 //         0.25,
                 //         75,
                 //         60,
-                //         progress
+                //         progress    
                 //     );
                 //     gsap.set(cardContainer, { width: `${widthPercentage}%` });
                 // } else {

@@ -98,12 +98,9 @@
 
 .sticky .card-back span {
     position: absolute;
-    /* top: 2rem;  */
     top: clamp(0.5rem, 1.5vw, 2rem);
-    /* left: 2rem; */
     left: clamp(0.5rem, 1.5vw, 2rem);
     opacity: 0.7;
-    /* font-size: 18px; */
     font-size: clamp(4px, 1.6vw, 18px);
 }
 
@@ -171,13 +168,31 @@
 }
 
 @media (max-width: 1250px) {
-     .sticky .card-container {
+
+    .sticky-header {
+        top: 25%;
+    }
+
+    .sticky .card-container {
         width: 80%;
+    }
+
+    .sticky .sticky-header h1 {
+        font-size: 3rem;
     }
 
 }
 
 @media (max-width: 1000px) {
+
+    .sticky-header {
+        top: 30%;
+    }
+
+    .sticky .sticky-header h1 {
+        font-size: 2.5rem;
+    }
+
     .sticky .card-back span {
         font-size: 12px;
     }
@@ -188,6 +203,28 @@
 
     .sticky .card-container {
         width: 90%;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .sticky .card-back p {
+        line-height: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .sticky-header {
+        top: 35%;
+    }
+
+    .sticky-header h1 {
+        white-space: nowrap;
+    }
+
+
+    .sticky .card-back p {
+        line-height: 0.8rem;
     }
 
 }
