@@ -78,7 +78,7 @@ mm.add("(max-width: 1000px) and (min-width: 501px)", () => {
 // 500-
 mm.add("(max-width: 500px)", () => {
 
-   headerFinalY = 30;
+  headerFinalY = 30;
   featureStartPositions = [
     { top: 25, left: 15 }, //Python
     { top: 12.5, left: 50 },  //Bash
@@ -141,7 +141,10 @@ window.addEventListener("resize", () => {
 ScrollTrigger.create({
   trigger: ".spotlight",
   start: "start",
-  end: `+=${window.innerHeight * 2.5}px`,
+  // end: `+=${window.innerHeight * 2.5}px`,
+  end: `+=${window.innerWidth < 1000
+    ? window.innerHeight * 2
+    : window.innerHeight * 2.5}px`,
   pin: true,
   pinSpacing: true,
   scrub: 1,

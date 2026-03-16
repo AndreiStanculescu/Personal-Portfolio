@@ -97,20 +97,22 @@
 
 
 .sticky .card-back span {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  opacity: 0.7;
-  font-size: 18px;
+    position: absolute;
+    /* top: 2rem;  */
+    top: clamp(0.5rem, 1.5vw, 2rem);
+    /* left: 2rem; */
+    left: clamp(0.5rem, 1.5vw, 2rem);
+    opacity: 0.7;
+    /* font-size: 18px; */
+    font-size: clamp(4px, 1.6vw, 18px);
 }
+
 
 .sticky .card-back p {
-    font-size: 22px;
-    line-height: 1.7rem;
-    padding: 0px 16px 0px 0px;
-
+    font-size: clamp(6px, 1.6vw, 22px);
+    line-height: clamp(1.5rem, 2rem - 1vw, 2.2rem);
+    padding: 0 0.05vw 0 0;
 }
-
 
 .sticky #card-1 {
     border-radius: 20px 0 0 20px;
@@ -136,7 +138,8 @@
     align-items: center;
     text-align: center;
     transform: rotateY(180deg);
-    padding: 2rem;
+    /* padding: 2rem; */
+    padding: clamp(0.5rem, 1.7vw, 2rem);
 }
 
 .sticky .card-back .icons {
@@ -156,7 +159,7 @@
 
 .sticky #card-1 .card-back {
     background-color: var(--card-1);
-    
+
 }
 
 .sticky #card-2 .card-back {
@@ -165,4 +168,92 @@
 
 .sticky #card-3 .card-back {
     background-color: var(--card-3);
+}
+
+@media (max-width: 1250px) {
+     .sticky .card-container {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .sticky .card-back span {
+        font-size: 12px;
+    }
+
+    .sticky .card-back p {
+        line-height: 1.3rem;
+    }
+
+    .sticky .card-container {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .sticky {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .sticky-header {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin-bottom: 40px;
+    }
+
+    .sticky .sticky-header h1 {
+        transform: none;
+        opacity: 1;
+        font-size: 2.2rem;
+    }
+
+
+    .sticky .card-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+        transform: none;
+    }
+
+
+    .sticky .card {
+        transform: none !important;
+        aspect-ratio: auto;
+    }
+
+
+    .sticky .card-front {
+        display: none;
+    }
+
+
+    .sticky .card-back {
+        position: relative;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        min-height: 120px;
+    }
+
+    .sticky .card-back span {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+
+    .sticky .card-back p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
 }
