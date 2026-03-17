@@ -1,0 +1,93 @@
+.outro {
+    width: 100%;
+    height: 100svh;
+    color: var(--base-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.outro-content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.outro-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.outro-subtitle {
+    font-size: 1.5rem;
+    color: #ddd;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.outro-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem; 
+    margin: 0 auto;
+    max-width: 500px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.contact-item img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.contact-item a {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-item a:hover {
+    color: #aaa;
+}
+
+.outro-title,
+.outro-subtitle,
+.contact-item {
+    opacity: 0;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: var(--base-100);
+    color: var(--base-500);
+}
+
+.btn.secondary {
+    border: 1px solid var(--base-300);
+    color: var(--base-100);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}

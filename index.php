@@ -24,6 +24,8 @@
 
     <?php include __DIR__ . '/section4.html'; ?>
 
+    <?php include __DIR__ . '/section5.html'; ?>
+
     <script src="js/index-script.js"></script>
     <script>
         const lenis = new Lenis({
