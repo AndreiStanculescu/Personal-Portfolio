@@ -18,6 +18,11 @@
      font-family: "Instrument Serif", sans-serif;
  }
 
+ html, body {
+    overflow-x: hidden;
+    touch-action: pan-y;
+  }
+  
  section {
      position: relative;
      width: 100%;
