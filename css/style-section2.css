@@ -40,7 +40,7 @@
 
 .spotlight h1 {
   text-align: center;
-   font-size: 4vw;
+  font-size: 4vw;
   font-weight: 500;
   line-height: 0.9;
   white-space: nowrap;
@@ -91,6 +91,18 @@
   will-change: transform, opacity;
   transform: translateY(-100px);
   opacity: 0;
+}
+
+.spotlight .header-content h1 {
+  font-size: 1rem;
+}
+
+.spotlight .header-content p {
+  font-family: "Instrument Serif", sans-serif;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+
 }
 
 .spotlight .feature {
@@ -155,8 +167,9 @@
   padding-top: 0.3rem;
 }
 
-
+/* Search-bar */
 .spotlight .search-bar {
+  font-family: "Instrument Serif", sans-serif;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -173,6 +186,13 @@
   will-change: opacity, width, height, transform;
 }
 
+.spotlight .search-bar h2 {
+  font-family: "Instrument Serif", sans-serif;
+  opacity: 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 .spotlight .search-bar p {
   position: relative;
   opacity: 0;
@@ -180,8 +200,62 @@
   text-align: center;
 }
 
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 700px;
+}
+
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-left: 2px solid var(--base-300);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.edu-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: var(--base-100);
+  border-radius: 50%;
+}
+
+.year {
+  font-size: 0.8rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.edu-item h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.school {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.details {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.location {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+
 @media (max-width: 1500px) {
-    .spotlight .spotlight-bg {
+  .spotlight .spotlight-bg {
     transform: scale(1.2);
   }
 }

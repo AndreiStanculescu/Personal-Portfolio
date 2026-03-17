@@ -8,6 +8,8 @@ const features = document.querySelectorAll(".feature");
 const featureBgs = document.querySelectorAll(".feature-bg");
 let headerFinalY = -10;
 
+const finalTop = window.innerWidth < 1000 ? 20 : 15;
+
 function setFeaturePositions(positions) {
   features.forEach((feature, index) => {
     const featurePos = positions[index];
@@ -236,40 +238,58 @@ ScrollTrigger.create({
       const width = 3 + (searchBarFinalWidth - 3) * searchBarProgress;
       const height = 3 + (5 - 3) * searchBarProgress;
 
-      const translateY = -50 + (200 - -50) * searchBarProgress;
+      // const translateY = -50 + (200 - -50) * searchBarProgress;
+
+      //    gsap.set(".search-bar", {
+      //   width: `${width}rem`,
+      //   height: `${height}rem`,
+      //   transform: `translate(-50%, ${translateY}%)`,
+      // });
+
+      // const topValue = 50 - (40 * searchBarProgress);
+      const topValue = 50 - ((50 - finalTop) * searchBarProgress);
 
       gsap.set(".search-bar", {
         width: `${width}rem`,
         height: `${height}rem`,
-        transform: `translate(-50%, ${translateY}%)`,
+        top: `${topValue}%`,
+        transform: "translate(-50%, -50%)",
       });
 
-      gsap.set(".search-bar p", {
+
+      gsap.set(".search-bar h2", {
         opacity: 0,
       });
     } else if (progress > 0.75) {
+      // gsap.set(".search-bar", {
+      //   width: `${searchBarFinalWidth}rem`,
+      //   height: "5rem",
+      //   transform: "translate(-50%, 200%)",
+      // });
       gsap.set(".search-bar", {
         width: `${searchBarFinalWidth}rem`,
         height: "5rem",
-        transform: "translate(-50%, 200%)",
+        top: `${finalTop}%`,
+        transform: "translate(-50%, -50%)",
       });
     }
 
     if (progress >= 0.75) {
       const finalHeaderProgress = (progress - 0.75) / 0.25;
 
-      gsap.set(".search-bar p", {
+      gsap.set(".search-bar h2", {
         opacity: finalHeaderProgress,
       });
 
-      const currentY = -50 + (headerFinalY + 50) * finalHeaderProgress;
+      // const currentY = -50 + (headerFinalY + 50) * finalHeaderProgress;
+      const currentY = 0 + (headerFinalY) * finalHeaderProgress;
 
       gsap.set(".header-content", {
         y: currentY,
         opacity: finalHeaderProgress,
       });
     } else {
-      gsap.set(".search-bar p", {
+      gsap.set(".search-bar h2", {
         opacity: 0,
       });
       gsap.set(".header-content", {
