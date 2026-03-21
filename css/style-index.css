@@ -18,11 +18,12 @@
      font-family: "Instrument Serif", sans-serif;
  }
 
- html, body {
-    overflow-x: hidden;
-    touch-action: pan-y;
-  }
-  
+ html,
+ body {
+     overflow-x: hidden;
+     touch-action: pan-y;
+ }
+
  section {
      position: relative;
      width: 100%;
@@ -141,7 +142,7 @@
      .intro-text {
          align-items: center;
          text-align: center;
-         max-width: 90%;
+         max-width: 100%;
      }
 
      .intro img {
@@ -170,5 +171,6 @@
      .intro a {
          font-size: 1.3rem;
      }
+
 
  }

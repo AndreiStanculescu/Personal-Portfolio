@@ -8,7 +8,7 @@ const features = document.querySelectorAll(".feature");
 const featureBgs = document.querySelectorAll(".feature-bg");
 let headerFinalY = -10;
 
-const finalTop = window.innerWidth < 1000 ? 20 : 15;
+const finalTop = window.innerWidth < 500 ? 12.5 : window.innerWidth < 1000 ? 20 : 15;
 
 function setFeaturePositions(positions) {
   features.forEach((feature, index) => {
@@ -80,13 +80,13 @@ mm.add("(max-width: 1000px) and (min-width: 501px)", () => {
 // 500-
 mm.add("(max-width: 500px)", () => {
 
-  headerFinalY = 30;
+  headerFinalY = -20;
   featureStartPositions = [
     { top: 25, left: 15 }, //Python
     { top: 12.5, left: 50 },  //Bash
     { top: 22.5, left: 75 },  //MySQL
     { top: 30, left: 85.5 },  //PHP
-    { top: 50, left: 20 },  //Javascript
+    { top: 60, left: 20 },  //Javascript
     { top: 80, left: 20 },  //HTML5
     { top: 75, left: 75 },  //CSS3
     { top: 35, left: 25 },  //GIT
@@ -94,7 +94,7 @@ mm.add("(max-width: 500px)", () => {
     { top: 72, left: 10 },  //Docker
     { top: 15, left: 65 },  //jQuery
     { top: 30, left: 60 },  //Ansible
-    { top: 50, left: 90 },  //Terraform
+    { top: 40, left: 90 },  //Terraform
     { top: 67.5, left: 85 },  //CI/CD
     { top: 77.5, left: 90 },  //Kubernetes
     { top: 22.5, left: 37.5 },  //AWS
