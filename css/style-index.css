@@ -170,6 +170,7 @@
     .intro .contact li,
     .intro a {
         font-size: 1.3rem;
+        line-height: 1.75; 
     }
 
  }
@@ -186,7 +187,7 @@
          text-align: center;
          gap: 30px;
          justify-content: flex-start;
-         padding-top: 60px;
+         padding-top: 50px;
      }
 
      .intro-text {
@@ -219,7 +220,8 @@
 
      .intro .contact li,
      .intro a {
-         font-size: 1.3rem;
+         font-size: 1.1rem;
+         line-height: 1.75; 
      }
 
 

@@ -290,7 +290,7 @@
 @media (max-width: 500px) and (min-height: 800px) {
 
   .spotlight .header {
-    top: 60%;
+    top: 55%;
     transform: translate(-50%, -50%);
   }
 
@@ -408,4 +408,39 @@
     width: 24px;
     height: 24px;
   }
+
+
+  .spotlight .header {
+    top: 57.5%;
+    transform: translate(-50%, -50%);
+  }
+
+  .edu-item {
+    gap: 0.1rem;
+  }
+
+  .year {
+    font-size: 0.7rem;
+  }
+
+  .edu-item h3 {
+    font-size: 0.9rem;
+  }
+
+  .school {
+    font-size: 0.8rem;
+  }
+
+  .details {
+    font-size: 0.7rem;
+  }
+
+  .location {
+    font-size: 0.5rem;
+  }
+
+  .spotlight .header-content {
+    gap: 1.5rem;
+  }
+
 }
