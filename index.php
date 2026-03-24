@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 
+    <link rel="icon" type="image/png" href="assets/icons/resume.webp">
     <link rel="stylesheet" href="css/style-index.css">
 </head>
 
