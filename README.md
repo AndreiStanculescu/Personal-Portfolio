@@ -1,57 +1,57 @@
 # 💼 Personal Portfolio
 
-Acest repository reprezinta CV-ul meu interactiv, construit ca o experienta web moderna, axata pe animatii fluide si interactiuni dinamice.
+This repository represents my interactive CV, built as a modern web experience focused on smooth animations and dynamic interactions.
 
-## 🚀 Despre proiect
+## 🚀 About the Project
 
-Proiectul este un website de tip portfolio in care informatiile despre mine (experienta, skill-uri, proiecte) sunt prezentate intr-un mod vizual si animat, nu intr-un format static traditional.
+This project is a portfolio-style website where information about me (experience, skills, projects) is presented in a visual and animated way, rather than in a traditional static format.
 
-Accentul este pus pe:
+The focus is on:
 
-* experienta utilizatorului
-* animatii controlate prin scroll
-* design modern si responsive
+* user experience
+* scroll-driven animations
+* modern and responsive design
 
 ---
 
-## 🛠️ Tehnologii utilizate
+## 🛠️ Technologies Used
 
 * JavaScript (vanilla)
-* CSS (layout custom + animatii complexe)
+* CSS (custom layouts + complex animations)
 * HTML5
 
-### Librarii / concepte:
+### Libraries / Concepts:
 
-* ScrollTrigger (pentru animatii sincronizate cu scroll-ul)
+* ScrollTrigger (for scroll-synced animations)
 * Lenis (smooth scrolling)
-* animatii bazate pe timeline si delay-uri
-* control fin al secventelor de animatie
+* timeline-based animations and delays
+* fine control over animation sequences
 
 ---
 
-## 🎬 Functionalitati principale
+## 🎬 Main Features
 
-* ✨ Animatii declansate la scroll vertical
-* ⏱️ Animatii cu timing controlat (delay / secventiere)
-* 🧠 Interactiuni fluide si naturale
-* 📱 Design complet responsive (optimizat pentru mobile)
-* 🎯 Structura de tip storytelling (navigare lineara prin scroll)
+* ✨ Scroll-triggered animations
+* ⏱️ Timed animations (delays / sequencing)
+* 🧠 Smooth and natural interactions
+* 📱 Fully responsive design (optimized for mobile)
+* 🎯 Storytelling structure (linear navigation through scroll)
 
 ---
 
 ## 📱 Responsive Design
 
-Aplicatia este optimizata pentru:
+The application is optimized for:
 
 * desktop
-* tableta
-* telefon mobil
+* tablet
+* mobile devices
 
-Animatiile si layout-ul se adapteaza pentru a pastra experienta consistenta pe orice dispozitiv.
+Animations and layout adapt to maintain a consistent experience across all screen sizes.
 
 ---
 
-## 📂 Structura proiectului
+## 📂 Project Structure
 
 ```bash
 .
@@ -62,30 +62,27 @@ Animatiile si layout-ul se adapteaza pentru a pastra experienta consistenta pe o
 ├── css/             # style-*.css
 ├── js/              # script-*.js, shaders.js
 └── assets/          # images + icons/
-```
 
 ---
 
-## ⚙️ Cum accesezi proiectul
+## 🔗 Live demo: https://andreistanculescu.com
 
-🔗 Live demo: https://andreistanculescu.com
-
-Proiectul este disponibil online si poate fi accesat direct in browser, fara a fi nevoie sa clonezi repository-ul.
+The project is available online and can be accessed directly in the browser, without the need to clone the repository.
 
 ---
 
-## 🎯 Scopul proiectului
+## 🎯 Project Purpose
 
-Acest proiect are rolul de:
+This project aims to:
 
-* a inlocui un CV clasic cu o experienta interactiva
-* a demonstra abilitati de front-end (JS + CSS)
-* a evidentia atentia la detalii si UX
+replace a traditional CV with an interactive experience
+demonstrate front-end skills (JavaScript + CSS)
+highlight attention to detail and UX
 
 ---
 
 ## 📬 Contact
 
-Pentru colaborari sau intrebari, ma poti contacta direct prin platformele listate in portfolio.
+For collaborations or inquiries, feel free to reach out through the platforms listed in the portfolio.
 
 ---
