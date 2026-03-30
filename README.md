@@ -1,4 +1,4 @@
-# 💼 Personal Portfolio
+<h1 align="center"><strong>Personal Portfolio</strong></h1> 
 
 This repository represents my interactive CV, built as a modern web experience focused on smooth animations and dynamic interactions.
 
