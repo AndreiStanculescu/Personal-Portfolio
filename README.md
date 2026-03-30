@@ -2,6 +2,8 @@
 
 This repository represents my interactive CV, built as a modern web experience focused on smooth animations and dynamic interactions.
 
+---
+
 ## 🚀 About the Project
 
 This project is a portfolio-style website where information about me (experience, skills, projects) is presented in a visual and animated way, rather than in a traditional static format.
