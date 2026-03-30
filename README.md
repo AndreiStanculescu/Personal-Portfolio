@@ -75,9 +75,9 @@ Animations and layout adapt to maintain a consistent experience across all scree
 
 This project aims to:
 
-replace a traditional CV with an interactive experience
-demonstrate front-end skills (JavaScript + CSS)
-highlight attention to detail and UX
+* replace a traditional CV with an interactive experience
+* demonstrate front-end skills (JavaScript + CSS)
+* highlight attention to detail and UX
 
 ---
 
