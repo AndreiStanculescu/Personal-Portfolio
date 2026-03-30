@@ -62,7 +62,7 @@ Animations and layout adapt to maintain a consistent experience across all scree
 ├── css/             # style-*.css
 ├── js/              # script-*.js, shaders.js
 └── assets/          # images + icons/
-
+```
 ---
 
 ## 🔗 Live demo: https://andreistanculescu.com
