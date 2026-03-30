@@ -2,6 +2,10 @@
 
 This repository represents my interactive CV, built as a modern web experience focused on smooth animations and dynamic interactions.
 
+## 🔗 Live demo: https://andreistanculescu.com
+
+The project is available online and can be accessed directly in the browser, without the need to clone the repository.
+
 ---
 
 ## 🚀 About the Project
@@ -65,12 +69,6 @@ Animations and layout adapt to maintain a consistent experience across all scree
 ├── js/              # script-*.js, shaders.js
 └── assets/          # images + icons/
 ```
----
-
-## 🔗 Live demo: https://andreistanculescu.com
-
-The project is available online and can be accessed directly in the browser, without the need to clone the repository.
-
 ---
 
 ## 🎯 Project Purpose
